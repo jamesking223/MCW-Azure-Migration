@@ -141,7 +141,8 @@ Start-Process -FilePath msiexec.exe -ArgumentList $arguments -Wait
 $azcopy = '"C:\Program Files (x86)\Microsoft SDKs\Azure\AzCopy\AzCopy.exe"'
 
 # Download SmartHotel VMs from blob storage
-$container = 'https://cloudworkshop.blob.core.windows.net/azure-migration'
+# $container = 'https://cloudworkshop.blob.core.windows.net/azure-migration'
+$container = 'https://opsgilitylabs.blob.core.windows.net/public'
 
 cmd /c "$azcopy /Source:$container/SmartHotelWeb1.zip /Dest:$tempDir\SmartHotelWeb1.zip"
 cmd /c "$azcopy /Source:$container/SmartHotelWeb2.zip /Dest:$tempDir\SmartHotelWeb2.zip"
